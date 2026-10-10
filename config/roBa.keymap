@@ -59,11 +59,6 @@
             key-positions = <30 31>;
         };
 
-        HANZEN {
-            bindings = <&kp TILDE>;
-            key-positions = <1 2>;
-        };
-
         change_layer6 {
             bindings = <&lt 6 B>;
             key-positions = <26>;
@@ -76,6 +71,13 @@
             #binding-cells = <1>;
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
+        };
+
+        Win_Psc: Win_Psc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk LEFT_GUI &kp PRINTSCREEN>;
+            label = "WIN_PSC";
         };
     };
 
@@ -115,10 +117,10 @@
 
         FUNCTION {
             bindings = <
-&kp F1   &kp F2   &kp F3   &kp F4           &kp F5                                                        &trans  &kp HOME            &kp UP_ARROW    &kp END              &kp PAGE_UP
-&kp F6   &kp F7   &kp F8   &kp F9           &kp F10              &kp LC(LA(KP_NUMBER_0))      &kp DELETE  &trans  &kp LEFT_ARROW      &kp DOWN_ARROW  &kp RIGHT_ARROW      &kp PAGE_DOWN
-&kp F11  &kp F12  &kp INS  &kp PRINTSCREEN  &kp LG(PRINTSCREEN)  &trans                       &trans      &trans  &kp LS(LEFT_ARROW)  &kp TAB         &kp LS(RIGHT_ARROW)  &kp SCROLLLOCK
-&trans   &trans   &trans   &trans           &trans               &trans                       &trans      &trans                                                           &trans
+&kp F1   &kp F2   &kp F3   &kp F4           &kp F5                                             &trans  &kp HOME            &kp UP_ARROW    &kp END              &kp PAGE_UP
+&kp F6   &kp F7   &kp F8   &kp F9           &kp F10   &kp LC(LA(KP_NUMBER_0))      &kp DELETE  &trans  &kp LEFT_ARROW      &kp DOWN_ARROW  &kp RIGHT_ARROW      &kp PAGE_DOWN
+&kp F11  &kp F12  &kp INS  &kp PRINTSCREEN  &Win_Psc  &trans                       &trans      &trans  &kp LS(LEFT_ARROW)  &kp TAB         &kp LS(RIGHT_ARROW)  &kp SCROLLLOCK
+&trans   &trans   &trans   &trans           &trans    &trans                       &trans      &trans                                                           &trans
             >;
         };
 
