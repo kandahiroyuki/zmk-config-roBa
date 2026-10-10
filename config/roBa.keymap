@@ -78,18 +78,20 @@
         };
 
         // Win + PrintScreen を実行するマクロ
-
         // Win + PrintScreen を実行するマクロ
+
         scrshot: scrshot {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <30>;
-            tap-ms = <30>;
-            bindings
-                = <&macro_press &kp LGUI>
-                , <&macro_tap &kp PRINTSCREEN>
-                , <&macro_release &kp LGUI>
-                ;
+            wait-ms = <100>;
+            tap-ms = <100>;
+            bindings =
+                <&macro_press>,
+                <&kp LGUI>,
+                <&macro_tap>,
+                <&kp PRINTSCREEN>,
+                <&macro_release>,
+                <&kp LGUI>;
         };
     };
 
@@ -140,7 +142,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans                          &kp PLUS          &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_SLASH
 &trans  &trans  &trans  &trans  &trans  &trans      &kp DELETE  &kp SINGLE_QUOTE  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_ASTERISK
-&trans  &trans  &trans  &trans  &trans  &trans      &kp COMMA   &kp EQUAL         &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_MINUS
+&trans  &trans  &trans  &trans  &trans  &trans      &kp COMMA   &kp LEFT_BRACKET  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_MINUS
 &trans  &trans  &trans  &trans  &trans  &trans      &kp KP_DOT  &kp KP_NUMBER_0                                                      &kp KP_PLUS
             >;
 
