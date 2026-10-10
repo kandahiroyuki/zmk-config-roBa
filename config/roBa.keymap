@@ -87,11 +87,11 @@
             tap-ms = <100>;
             bindings =
                 <&macro_press>,
-                <&kp LGUI>,
+                <&sk LGUI>,
                 <&macro_tap>,
                 <&kp PRINTSCREEN>,
                 <&macro_release>,
-                <&kp LGUI>;
+                <&sk LGUI>;
         };
     };
 
