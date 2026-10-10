@@ -3,10 +3,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
-#define JP_YEN          0x89              // ¥
-#define JP_PIPE         LS(0x89)          // |
-#define JP_UNDERSCORE   LS(0x87)          // _
-
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
@@ -75,23 +71,6 @@
             #binding-cells = <1>;
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
-        };
-
-        // Win + PrintScreen を実行するマクロ
-        // Win + PrintScreen を実行するマクロ
-
-        scrshot: scrshot {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <100>;
-            tap-ms = <100>;
-            bindings =
-                <&macro_press>,
-                <&sk LGUI>,
-                <&macro_tap>,
-                <&kp PRINTSCREEN>,
-                <&macro_release>,
-                <&sk LGUI>;
         };
     };
 
