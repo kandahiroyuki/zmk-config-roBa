@@ -78,16 +78,19 @@
         };
 
         // Win + PrintScreen を実行するマクロ
+
         scrshot: scrshot {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <30>;
             tap-ms = <30>;
-            bindings
-                = <&macro_press &kp LGUI>
-                , <&macro_tap &kp PRINTSCREEN>
-                , <&macro_release &kp LGUI>
-                ;
+            bindings =
+                <&macro_press>,
+                <&kp LGUI>,
+                <&macro_tap>,
+                <&kp PRINTSCREEN>,
+                <&macro_release>,
+                <&kp LGUI>;
         };
     };
 
@@ -127,10 +130,10 @@
 
         FUNCTION {
             bindings = <
-&kp F1   &kp F2   &kp F3   &kp F4           &kp F5                                            &trans  &kp HOME            &kp UP_ARROW    &kp END              &kp PAGE_UP
-&kp F6   &kp F7   &kp F8   &kp F9           &kp F10  &kp LC(LA(KP_NUMBER_0))      &kp DELETE  &trans  &kp LEFT_ARROW      &kp DOWN_ARROW  &kp RIGHT_ARROW      &kp PAGE_DOWN
-&kp F11  &kp F12  &kp INS  &kp PRINTSCREEN  &kp LG(PRINTSCREEN)  &trans                       &trans      &trans  &kp LS(LEFT_ARROW)  &kp TAB         &kp LS(RIGHT_ARROW)  &kp SCROLLLOCK
-&trans   &trans   &trans   &trans           &trans   &trans                       &trans      &trans                                                           &trans
+&kp F1   &kp F2   &kp F3   &kp F4           &kp F5                                             &trans  &kp HOME            &kp UP_ARROW    &kp END              &kp PAGE_UP
+&kp F6   &kp F7   &kp F8   &kp F9           &kp F10   &kp LC(LA(KP_NUMBER_0))      &kp DELETE  &trans  &kp LEFT_ARROW      &kp DOWN_ARROW  &kp RIGHT_ARROW      &kp PAGE_DOWN
+&kp F11  &kp F12  &kp INS  &kp PRINTSCREEN  &scrshot  &trans                       &trans      &trans  &kp LS(LEFT_ARROW)  &kp TAB         &kp LS(RIGHT_ARROW)  &kp SCROLLLOCK
+&trans   &trans   &trans   &trans           &trans    &trans                       &trans      &trans                                                           &trans
             >;
         };
 
