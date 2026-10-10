@@ -72,13 +72,6 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
-
-        Win_Psc: Win_Psc {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&sk LEFT_GUI &kp PRINTSCREEN>;
-            label = "WIN_PSC";
-        };
     };
 
     behaviors {
@@ -117,19 +110,19 @@
 
         FUNCTION {
             bindings = <
-&kp F1   &kp F2   &kp F3   &kp F4           &kp F5                                             &trans  &kp HOME            &kp UP_ARROW    &kp END              &kp PAGE_UP
-&kp F6   &kp F7   &kp F8   &kp F9           &kp F10   &kp LC(LA(KP_NUMBER_0))      &kp DELETE  &trans  &kp LEFT_ARROW      &kp DOWN_ARROW  &kp RIGHT_ARROW      &kp PAGE_DOWN
-&kp F11  &kp F12  &kp INS  &kp PRINTSCREEN  &Win_Psc  &trans                       &trans      &trans  &kp LS(LEFT_ARROW)  &kp TAB         &kp LS(RIGHT_ARROW)  &kp SCROLLLOCK
-&trans   &trans   &trans   &trans           &trans    &trans                       &trans      &trans                                                           &trans
+&kp F1   &kp F2   &kp F3          &kp F4      &kp F5                                                    &trans  &kp HOME            &kp UP_ARROW    &kp END              &kp PAGE_UP
+&kp F6   &kp F7   &kp F8          &kp F9      &kp F10          &kp LC(LA(KP_NUMBER_0))      &kp DELETE  &trans  &kp LEFT_ARROW      &kp DOWN_ARROW  &kp RIGHT_ARROW      &kp PAGE_DOWN
+&kp F11  &kp F12  &kp KP_NUMLOCK  &kp INSERT  &kp PRINTSCREEN  &trans                       &trans      &trans  &kp LS(LEFT_ARROW)  &kp TAB         &kp LS(RIGHT_ARROW)  &kp SCROLLLOCK
+&trans   &trans   &trans          &trans      &trans           &trans                       &trans      &trans                                                           &trans
             >;
         };
 
         NUM {
             bindings = <
-&kp KP_NUM  &trans  &trans  &trans  &trans                            &kp PLUS          &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_SLASH
-&trans      &trans  &trans  &trans  &trans  &trans      &kp DELETE    &kp SINGLE_QUOTE  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_ASTERISK
-&trans      &trans  &trans  &trans  &trans  &trans      &kp KP_COMMA  &kp EQUAL         &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_MINUS
-&trans      &trans  &trans  &trans  &trans  &trans      &kp KP_DOT    &kp KP_NUMBER_0                                                      &kp KP_PLUS
+&trans  &trans  &trans  &trans  &trans                          &kp PLUS          &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_SLASH
+&trans  &trans  &trans  &trans  &trans  &trans      &kp DELETE  &kp SINGLE_QUOTE  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_ASTERISK
+&trans  &trans  &trans  &trans  &trans  &trans      &kp COMMA   &kp MINUS         &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_MINUS
+&trans  &trans  &trans  &trans  &trans  &trans      &kp KP_DOT  &kp KP_NUMBER_0                                                      &kp KP_PLUS
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
