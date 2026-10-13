@@ -114,10 +114,10 @@
 
         NUM {
             bindings = <
-&kp KP_NLCK  &none  &none  &none  &none                         &kp PLUS          &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_SLASH
-&none        &none  &none  &none  &none  &none      &kp DELETE  &kp SINGLE_QUOTE  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_ASTERISK
-&none        &none  &none  &none  &none  &none      &kp COMMA   &kp LS(MINUS)     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_MINUS
-&none        &none  &none  &none  &none  &none      &kp KP_DOT  &kp KP_NUMBER_0                                                      &kp KP_PLUS
+&kp KP_NLCK  &none  &none  &none  &none                          &kp PLUS          &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_SLASH
+&none        &none  &none  &none  &none  &trans      &kp DELETE  &kp SINGLE_QUOTE  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_ASTERISK
+&none        &none  &none  &none  &none  &none       &kp COMMA   &kp LS(MINUS)     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_MINUS
+&none        &none  &none  &none  &none  &none       &kp KP_DOT  &kp KP_NUMBER_0                                                      &kp KP_PLUS
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
@@ -125,10 +125,10 @@
 
         MOUSE {
             bindings = <
-&none  &none  &none  &none  &none                    &none  &kp LA(LEFT)  &none      &kp LA(RIGHT)  &none
-&none  &none  &none  &none  &none  &none      &none  &none  &mkp MB1      &mkp MB3   &mkp MB2       &none
-&none  &none  &none  &none  &none  &none      &none  &none  &kp LC(X)     &kp LC(C)  &kp LC(V)      &none
-&none  &none  &none  &none  &none  &none      &none  &none                                          &none
+&none  &none  &none  &none  &none                     &none  &kp LA(LEFT)  &none      &kp LA(RIGHT)  &none
+&none  &none  &none  &none  &none  &trans      &none  &none  &mkp MB1      &mkp MB3   &mkp MB2       &none
+&none  &none  &none  &none  &none  &none       &none  &none  &kp LC(X)     &kp LC(C)  &kp LC(V)      &none
+&none  &none  &none  &none  &none  &none       &none  &none                                          &none
             >;
         };
 
