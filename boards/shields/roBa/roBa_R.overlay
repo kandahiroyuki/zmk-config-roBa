@@ -1,6 +1,6 @@
 #include "roBa.dtsi"
 
-#include <input/processors.dtsi>　// 追加
+// #include <input/processors.dtsi>　// 追加
 
 &default_transform {
     col-offset = <6>;
