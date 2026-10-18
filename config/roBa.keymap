@@ -101,19 +101,19 @@
 
         kigou {
             bindings = <
-&kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR      &kp PERCENT                      &kp CARET  &kp AMPERSAND      &kp PLUS                 &kp LS(INT_YEN)   &kp INT_YEN
-&none            &none        &none     &kp LEFT_BRACE  &kp EQUAL    &trans      &none   &kp COLON  &kp DOUBLE_QUOTES  &kp LS(INTERNATIONAL_1)  &kp LEFT_BRACKET  &kp LS(MINUS)
-&none            &none        &none     &none           &none        &none       &none   &kp MINUS  &kp SLASH          &kp SEMI                 &kp SINGLE_QUOTE  &none
-&trans           &trans       &trans    &trans          &trans       &trans      &trans  &trans                                                                   &none
+&kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR      &kp PERCENT                       &kp CARET  &kp AMPERSAND      &kp PLUS                 &kp LS(INT_YEN)   &kp INT_YEN
+&none            &none        &none     &kp LEFT_BRACE  &kp EQUAL    &trans      &kp DEL  &kp COLON  &kp DOUBLE_QUOTES  &kp LS(INTERNATIONAL_1)  &kp LEFT_BRACKET  &kp LS(MINUS)
+&none            &none        &none     &none           &none        &none       &none    &kp MINUS  &kp SLASH          &kp SEMI                 &kp SINGLE_QUOTE  &none
+&trans           &trans       &trans    &trans          &trans       &trans      &trans   &trans                                                                   &none
             >;
         };
 
         FUNCTION {
             bindings = <
-&kp F1        &kp F2        &kp F3        &kp F4     &kp F5                             &none   &kp HOME            &kp UP_ARROW    &kp END              &kp PG_UP
-&kp F6        &kp F7        &kp F8        &kp F9     &kp F10        &trans      &none   &none   &kp LEFT_ARROW      &kp DOWN_ARROW  &kp RIGHT_ARROW      &kp PG_DN
-&kp F11       &kp F12       &kp INS       &kp PSCRN  &kp LG(PSCRN)  &none       &none   &none   &kp LS(LEFT_ARROW)  &kp TAB         &kp LS(RIGHT_ARROW)  &kp SCROLLLOCK
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans     &trans         &trans      &trans  &trans                                                           &none
+&kp F1        &kp F2        &kp F3        &kp F4     &kp F5                              &none   &kp HOME            &kp UP_ARROW    &kp END              &kp PG_UP
+&kp F6        &kp F7        &kp F8        &kp F9     &kp F10        &trans      &kp DEL  &none   &kp LEFT_ARROW      &kp DOWN_ARROW  &kp RIGHT_ARROW      &kp PG_DN
+&kp F11       &kp F12       &kp INS       &kp PSCRN  &kp LG(PSCRN)  &none       &none    &none   &kp LS(LEFT_ARROW)  &kp TAB         &kp LS(RIGHT_ARROW)  &kp SCROLLLOCK
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans     &trans         &trans      &trans   &trans                                                           &none
             >;
         };
 
@@ -130,7 +130,7 @@
 
         MOUSE {
             bindings = <
-&none  &none  &none  &none  &none                             &none  &kp LA(LEFT)  &lt 5 I    &kp LA(RIGHT)  &none
+&none  &none  &none  &none  &none                             &none  &kp LA(LEFT)  &mo 5      &kp LA(RIGHT)  &none
 &none  &none  &none  &none  &none  &trans      &kp BACKSPACE  &none  &mkp MB1      &mkp MB3   &mkp MB2       &none
 &none  &none  &none  &none  &none  &none       &none          &none  &kp LC(X)     &kp LC(C)  &kp LC(V)      &none
 &none  &none  &none  &none  &none  &none       &none          &none                                          &kp ESC
