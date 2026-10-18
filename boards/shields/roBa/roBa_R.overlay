@@ -1,5 +1,7 @@
 #include "roBa.dtsi"
 
+#include <input/processors.dtsi>　// 追加
+
 &default_transform {
     col-offset = <6>;
 };
@@ -35,6 +37,9 @@
         status = "okay";
         compatible = "zmk,input-listener";
         device = <&trackball>;
+
+        input-processors = <&zip_temp_layer 5 10000>; // 追加
+
     };
 };
 
