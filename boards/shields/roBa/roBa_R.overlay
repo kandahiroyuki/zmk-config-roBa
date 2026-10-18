@@ -1,7 +1,5 @@
 #include "roBa.dtsi"
 
-// #include <input/processors.dtsi>　// 追加
-
 &default_transform {
     col-offset = <6>;
 };
@@ -16,33 +14,13 @@
             ;
 };
 
-/*
-&zip_temp_layer {
-    excluded-positions = <
-        6 // u
-        7 // i
-        8 // o
-        18 // J
-        19 // K
-        20 // L       
-        30 // M 
-        31 // ,
-        32 // .
-    >;
-};
-*/
-
 / {
     trackball_listener {
         status = "okay";
         compatible = "zmk,input-listener";
         device = <&trackball>;
-
-//        input-processors = <&zip_temp_layer 5 10000>; // 追加
-
     };
 };
-
 
 &pinctrl {
     spi0_default: spi0_default {
