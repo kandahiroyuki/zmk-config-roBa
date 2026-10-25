@@ -96,7 +96,7 @@
 &kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &lt 3 INT_MUHENKAN  &mt LEFT_SHIFT SPACE  &lt 1 INT_HENKAN      &lt 2 ENTER    &mt RIGHT_SHIFT SPACE                             &kp ESC
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
         };
 
         kigou {
